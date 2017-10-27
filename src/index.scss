@@ -1,0 +1,10 @@
+@import 'globals';
+// $md-font-name: Arial !important;
+$md-font-family: Avenir;
+@include react-md-everything;
+
+body {
+  margin: 0;
+  padding: 0;
+  // font-family: 'Avenir';
+}

@@ -1,18 +1,35 @@
 import React, { Component } from 'react';
+
+import { Toolbar, ToolbarTitle, NavigationDrawer, ListItem } from 'react-md';
 import logo from '../logo.svg';
-import '../style/App.css';
+import '../App.css';
+
+const navItems = [{
+  label: 'Folder 1'
+},
+  {label: 'Folder 2'
+},
+  {label: 'Folder 3'
+},
+  {label: 'Folder 4'
+}];
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <NavigationDrawer
+          navItems={navItems.map(props => <ListItem {...props} primaryText={props.label} key={props.label} />)}
+          toolbarTitle="Blog App"
+
+        >
+
+        <Toolbar 
+          className="App-intro"
+          >
+        </Toolbar>
+        </NavigationDrawer>
+
       </div>
     );
   }
